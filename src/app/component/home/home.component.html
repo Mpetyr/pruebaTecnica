@@ -1,0 +1,36 @@
+<app-navbar></app-navbar>
+
+<div class="busque">
+    <!-- <h3>Busqueda</h3> -->
+    <div class="busqueda input-group mb-3">
+        <input [(ngModel)]="acronime" type="text" class="form-control" placeholder="Busqueda acronimos"
+            aria-label="Username" aria-describedby="basic-addon1">
+        <button type="submit" (click)="consultarAcronimo()" class="btn btn-secondary">Buscar</button>
+    </div>
+</div>
+
+<div *ngIf="notificacion" class="alert alert-success" role="alert">
+    Se ha guardado exitosamente
+</div>
+
+
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Forma completa</th>
+                <th scope="col">Frecuencia</th>
+                <th scope="col">Desde</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let acronime of listAcronime | paginate: { itemsPerPage: 10, currentPage: p }">
+                <td>{{ acronime.lf }}</td>
+                <td>{{ acronime.freq }}</td>
+                <td>{{ acronime.since }}</td>
+            </tr>
+        </tbody>
+        <pagination-controls class="pagination" *ngIf="pagination" (pageChange)="p = $event" previousLabel="Anterior"
+            nextLabel="Siguiente"></pagination-controls>
+    </table>
+</div>

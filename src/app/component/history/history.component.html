@@ -1,0 +1,22 @@
+<app-navbar></app-navbar>
+
+<h1 class="titulo">Historial de busqueda</h1>
+
+    <table class="table text-center">
+        <thead class="Secondary">
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Acronimo consultado</th>
+                <th scope="col">Fecha consulta</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let acronime of acronimeHistory | paginate: { itemsPerPage: 10, currentPage: p }">
+                <td>{{ acronime.Id }}</td>
+                <td>{{ acronime.Acronimo }}</td>
+                <td>{{ acronime.Fecha }}</td>
+            </tr>
+        </tbody>
+        <pagination-controls class="pagination" (pageChange)="p = $event" previousLabel="Anterior"
+        nextLabel="Siguiente"></pagination-controls>
+    </table>

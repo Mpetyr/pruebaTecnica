@@ -1,0 +1,22 @@
+.busqueda{
+    width: 50%;
+    margin: auto;
+    margin-top: 50px;
+    padding-bottom: 30px;
+
+}
+
+.table{
+    width: 65%;
+    margin: auto;
+}
+
+.alert{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+}
+
+.pagination{
+    padding: 10px;
+}
