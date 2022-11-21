@@ -1,6 +1,6 @@
-# PruebaTecnica-Back Api Acronimos
+# PruebaTecnica-Front Api Acronimos
 
-Prueba técnica realizada en Nodejs
+Prueba técnica realizada en Angular
 
 ## Tecnologías utilizadas
 
