@@ -18,6 +18,8 @@ Descargar el repositorio con git a través del siguiente comando:
 
 ## Ejecución del programa
 
+Ejecutar el comando npm i para la instalacion de todos los paquetes necesarios
+
 Estando dentro de Visual Studio Code ejecutamos el comando ng serve para iniciar el programa
 
 ## Estructura de base de datos requerida
